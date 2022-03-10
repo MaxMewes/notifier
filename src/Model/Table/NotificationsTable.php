@@ -40,7 +40,7 @@ class NotificationsTable extends Table
     public function initialize(array $config)
     {
         $this->setTable('notifications');
-        $this->withDisplayField('title');
+        $this->setDisplayField('title');
         $this->setPrimaryKey('id');
         $this->addBehavior('Timestamp');
     }
