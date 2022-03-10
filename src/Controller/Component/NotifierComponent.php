@@ -166,7 +166,7 @@ class NotifierComponent extends Component
             $user = $this->Controller->Auth->user('id');
         }
 
-        $model = TableRegistry::get('Bakkerij/Notifier.Notifications');
+        $model = TableRegistry::getTableLocator()->get('Bakkerij/Notifier.Notifications');
 
         if (!$notificationId) {
             $query = $model->find('all')->where([
